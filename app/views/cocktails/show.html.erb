@@ -1,0 +1,12 @@
+<h1>Cocktails#show</h1>
+<p>Find me in app/views/cocktails/show.html.erb</p>
+<h1><%= @cocktail.name %> </h1>
+<p>
+  <% @cocktail.doses.each do |t| %>
+  <ul>
+    <li><%= t.description %> </li>
+     <li> <%= t.ingredient.name %></li>
+  </ul>
+  <% end %>
+
+<%= link_to 'back to list', cocktails_path %> </p>
